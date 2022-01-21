@@ -3,6 +3,4 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt clean && apt update && apt upgrade -y && apt install -y locales nano wget
 RUN locale-gen en_US.UTF-8
 RUN update-locale LANG=en_US.UTF-8
-RUN mkdir /root/creation_times
-RUN echo "Image crated -> $(date +%s)" > /root/creation_times/"creation_drezael_ubuntu:20.04"
 CMD /bin/bash
